@@ -17,14 +17,14 @@ class Router:
     timeout = TELNET_TIMEOUT
     port = TELNET_PORT
 
-    def __init__(self, ip, username, password):
-        self.ip = ip
+    def __init__(self, ipaddr, username, password):
+        self.ipaddr = ipaddr
         self.username = username
         self.password = password
         self.logindone = 0
         self.output = ''
         try:
-            self.connection = telnetlib.Telnet(self.ip, self.port, self.timeout)
+            self.connection = telnetlib.Telnet(self.ipaddr, self.port, self.timeout)
         except socket.timeout:
             sys.exit("Connection timed-out")
         except socket.error:
