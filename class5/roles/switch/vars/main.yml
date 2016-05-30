@@ -1,0 +1,7 @@
+---
+the_switches:
+    - {hostname: switch-abc-1, secret: nobodyseethis, access_vlan: 256, ip_addr: 1.2.3.11, default_gateway: 1.2.3.1, snmp_community: picaboo}
+    - {hostname: switch-abc-2, secret: nobodyseethis, access_vlan: 256, ip_addr: 1.2.3.12, default_gateway: 1.2.3.1, snmp_community: picaboo}
+    - {hostname: switch-abc-3, secret: nobodyseethis, access_vlan: 256, ip_addr: 1.2.3.13, default_gateway: 1.2.3.1, snmp_community: picaboo}
+    - {hostname: switch-abc-4, secret: nobodyseethis, access_vlan: 256, ip_addr: 1.2.3.14, default_gateway: 1.2.3.1, snmp_community: picaboo}
+    - {hostname: switch-abc-5, secret: nobodyseethis, access_vlan: 256, ip_addr: 1.2.3.15, default_gateway: 1.2.3.1, snmp_community: picaboo}
