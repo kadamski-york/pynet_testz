@@ -1,0 +1,30 @@
+---
+
+- name: Create VLAN's on Arista
+  hosts: arista
+
+  tasks:
+    - name: create Black VLAN
+      eos_vlan: name=Black vlanid=144
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+
+    - name: create White VLAN
+      eos_vlan: name=White vlanid=244
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+
+    - name: create Yellow VLAN
+      eos_vlan: name=Yellow vlanid=344
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+
