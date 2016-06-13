@@ -15,16 +15,16 @@ def main():
     arista_creds = creds[1]
 
     for a_device in devices:
-        if 'pynet-sw' in a_device.device_name:
+        if 'arista' in a_device.device_type:
             a_device.vendor = 'arista'
-        elif 'pynet-rtr' in a_device.device_name:
+        elif 'cisco' in a_device.device_type:
             a_device.vendor = 'cisco'
-        elif 'juniper' in a_device.device_name:
+        elif 'juniper' in a_device.device_type:
             a_device.vendor = 'juniper'
         a_device.save()
 
     for a_device in devices:
-        print a_device.device_name, a_device.vendor
+        print a_device.device_name, a_device.vendor, a_device.device_type
 
 if __name__ == "__main__":
     main()
